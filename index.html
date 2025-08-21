@@ -4,44 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Public Health Law Hub</title>
+  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {margin: 0; padding: 0; box-sizing: border-box;}
-    body {font-family: 'Inter', sans-serif; line-height: 1.6; color: #1e293b; background-color: #f8fafc;}
-
-    header {background: #0c4a6e; color: #fff; padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,0.15);} 
-    nav {display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto;}
-    nav .logo {font-size: 1.25rem; font-weight: 700; letter-spacing: 0.5px;}
-    nav ul {list-style: none; display: flex; gap: 2rem;}
-    nav ul li a {color: #fff; text-decoration: none; font-weight: 600; transition: color 0.3s ease;}
-    nav ul li a:hover {color: #38bdf8;}
-
-    .hero {background: linear-gradient(rgba(12, 74, 110, 0.85), rgba(12, 74, 110, 0.85)), url('https://images.unsplash.com/photo-1581090700227-4c4f3fbc85e7') no-repeat center/cover; color: #fff; text-align: center; padding: 8rem 2rem; border-bottom-left-radius: 60px; border-bottom-right-radius: 60px;}
-    .hero h1 {font-size: 3rem; margin-bottom: 1rem; font-weight: 700;}
-    .hero p {font-size: 1.25rem; margin-bottom: 2.5rem; max-width: 720px; margin-left: auto; margin-right: auto;}
-    .btn {background: #38bdf8; color: #fff; padding: 1rem 2rem; border-radius: 9999px; font-weight: 600; text-decoration: none; transition: background 0.3s ease, transform 0.2s ease;}
-    .btn:hover {background: #0ea5e9; transform: translateY(-3px);}
-
-    section {padding: 5rem 2rem; max-width: 1200px; margin: auto;}
-    section h2 {text-align: center; font-size: 2.25rem; margin-bottom: 2rem; color: #0c4a6e; font-weight: 700;}
-    section p {max-width: 900px; margin: 0 auto 1.5rem auto; text-align: center; font-size: 1.05rem;}
-
-    .grid {display: grid; gap: 2rem; margin-top: 2rem;}
-    .grid-3 {grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));}
-
-    .card {background: #fff; padding: 2.5rem; border-radius: 20px; box-shadow: 0 6px 16px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;}
-    .card:hover {transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.12);}
-    .card h3 {color: #0c4a6e; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 700;}
-
-    footer {background: #0c4a6e; color: #fff; text-align: center; padding: 3rem 2rem; margin-top: 4rem; border-top-left-radius: 40px; border-top-right-radius: 40px;}
-    footer a {color: #38bdf8; text-decoration: none;}
-  </style>
 </head>
 <body>
+  <!-- Navigation -->
   <header>
-    <nav>
+    <nav class="navbar">
       <div class="logo">Public Health Law Hub</div>
-      <ul>
+      <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About Us</a></li>
         <li><a href="#services">Services</a></li>
@@ -50,66 +21,79 @@
     </nav>
   </header>
 
-  <section class="hero" id="home">
-    <h1>Welcome to the Public Health Law Hub</h1>
-    <p>An innovative initiative led by experienced public health attorneys, connecting legal epidemiologists with project partners to deliver accurate and reliable research that protects and improves population health.</p>
-    <a href="#connect" class="btn">Contact Us Today</a>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Welcome to the Hub!</h1>
+      <p>
+        The Public Health Law Hub is an innovative initiative led by experienced public health attorneys. 
+        We connect legal epidemiologists with project partners to provide accurate and reliable research 
+        that protects and improves population health.
+      </p>
+      <a href="#connect" class="cta-btn">Get in Touch</a>
+    </div>
   </section>
 
-  <section id="about">
+  <!-- About Us -->
+  <section id="about" class="section">
     <h2>About Us</h2>
-    <p>The Public Health Law Hub is a collective of experts offering consulting services in legal epidemiology assessments, legal research, and policy analysis. Managed by attorneys with extensive experience, projects are executed by vetted legal epidemiologists and public health professionals.</p>
-    <p>We streamline the process by combining an exclusive expert network with tailored project matching — ensuring the right talent supports your initiative without requiring full-time hires.</p>
-    <h3 style="text-align:center; margin-top:2rem; color:#0c4a6e;">Mission Statement</h3>
-    <p>Our mission is to connect organizations with public health law and policy experts to design, manage, and complete legal epidemiology studies. We aim to fill research gaps caused by underfunding, restrictions, and other barriers, advancing evidence-based solutions for healthier communities.</p>
+    <p>
+      The Hub is a collective of public health law and policy experts offering consulting services 
+      such as legal epidemiology assessments, legal research, and policy analysis. We match the right 
+      experts to each project, ensuring high-quality results without the need for permanent staff.
+    </p>
+    <h3>Our Mission</h3>
+    <p>
+      Our mission is to connect organizations with public health law and policy experts to design, 
+      manage, and complete legal epidemiology studies—filling gaps caused by underfunding and research restrictions.
+    </p>
   </section>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="grid grid-3">
+  <!-- Services -->
+  <section id="services" class="section alt-bg">
+    <h2>Services</h2>
+    <div class="cards">
       <div class="card">
         <h3>Legal Epidemiology Assessments</h3>
-        <p>We study the impact of laws and interventions on health outcomes, identifying inequities and informing evidence-based solutions.</p>
+        <p>
+          Study the impact of laws on public health using systematic methods 
+          to identify health inequities and inform evidence-based solutions.
+        </p>
       </div>
       <div class="card">
         <h3>Policy Analysis</h3>
-        <p>We evaluate policy options and recommend evidence-based approaches that improve effectiveness, efficiency, and equity.</p>
+        <p>
+          Evaluate and recommend policies with evidence-based insights 
+          to improve effectiveness, efficiency, and equity in outcomes.
+        </p>
       </div>
       <div class="card">
         <h3>Legal Research</h3>
-        <p>We analyze laws, regulations, and court decisions to answer questions, support arguments, and strengthen evidence-based action.</p>
+        <p>
+          Identify and analyze laws, regulations, and court decisions 
+          to answer critical public health legal questions.
+        </p>
       </div>
     </div>
   </section>
 
-  <section>
-    <h2>Benefits of the Hub</h2>
-    <div class="grid grid-3">
-      <div class="card">
-        <h3>Flexibility</h3>
-        <p>Engagement models tailored to client needs, from short-term consulting to long-term partnerships.</p>
-      </div>
-      <div class="card">
-        <h3>Scalability</h3>
-        <p>Support for projects of any size, from small reviews to comprehensive assessments.</p>
-      </div>
-      <div class="card">
-        <h3>Cost-Effective</h3>
-        <p>Clients save time and resources by accessing expert support without the cost of permanent staff.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="connect">
+  <!-- Connect -->
+  <section id="connect" class="section">
     <h2>Connect with Us</h2>
-    <p>Interested in partnering with the Hub? <a href="#">Fill out our prospective client interest form</a> to schedule a free consultation.</p>
-    <h3 style="text-align:center; margin-top:2rem; color:#0c4a6e;">Apply for the Bench</h3>
-    <p>Legal epidemiology and public health law projects are conducted by independent contractors on the Hub Bench. Contractors apply to join based on expertise and experience. New projects are posted and bids reviewed by Hub leadership to select the best fit.</p>
-    <p><a href="#">Apply here to join the Hub Bench.</a></p>
+    <p>
+      To set up a free consultation with the Hub, please fill out our 
+      <a href="#">prospective client interest form</a>.
+    </p>
+    <p>
+      Interested in joining The Hub Bench as a contractor? Apply via our 
+      <a href="#">contractor application form</a>.
+    </p>
+    <a href="mailto:info@publichealthlawhub.org" class="cta-btn">Contact Us</a>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Public Health Law Hub | Advancing equity through law & policy</p>
+    <p>© 2025 Public Health Law Hub. All rights reserved.</p>
   </footer>
 </body>
 </html>
